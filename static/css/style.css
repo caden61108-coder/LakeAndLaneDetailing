@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+padding-top:90px;
+font-family:Arial,sans-serif;
+background:black;
+color:white;
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+left:0;
+right:0;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:15px 30px;
+
+background:#111;
+
+border-bottom:2px solid royalblue;
+
+z-index:1000;
+
+box-sizing:border-box;
+
+width:100%;
+
+overflow:hidden;
+
+box-shadow:
+0 0 20px rgba(65,105,225,.4);
+}
+
+nav h1{
+
+font-family:'Alex Brush',cursive;
+
+font-size:2.3rem;
+
+margin:0;
+
+letter-spacing:1px;
+
+text-shadow:
+0 0 8px royalblue;
+}
+
+nav a{
+
+margin-left:20px;
+
+text-decoration:none;
+
+color:white;
+}
+
+nav a:hover{
+color:royalblue;
+}
+
+.hero{
+
+height:90vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+position:relative;
+}
+
+.glow-circle{
+
+position:absolute;
+
+width:550px;
+height:550px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(65,105,225,.65),
+transparent 70%
+);
+
+filter:blur(40px);
+
+z-index:-1;
+}
+
+.logo{
+
+width:300px;
+
+border-radius:20px;
+
+box-shadow:0 0 35px royalblue;
+}
+
+.brand-title{
+
+font-family:'Alex Brush',cursive;
+
+font-size:5.5rem;
+
+letter-spacing:2px;
+
+text-shadow:
+0 0 10px royalblue,
+0 0 20px royalblue;
+}
+
+button{
+
+padding:15px 30px;
+
+background:royalblue;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+background:rgb(70,115,255);
+
+box-shadow:
+0 0 15px royalblue,
+0 0 30px royalblue,
+0 0 50px rgba(65,105,225,.8);
+
+transition:all .3s ease;
+}
+
+.review-photo{
+
+width:90px;
+
+height:90px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+margin-bottom:15px;
+
+border:3px solid royalblue;
+
+box-shadow:
+0 0 15px rgba(65,105,225,.5);
+}
+
+.services,
+.gallery,
+.reviews{
+
+padding:70px;
+
+text-align:center;
+}
+
+.cards,
+.gallery-row,
+.review-cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+}
+
+.card{
+
+background:#111;
+
+padding:30px;
+
+width:300px;
+
+border-radius:15px;
+
+border:1px solid silver;
+
+display:flex;
+
+flex-direction:column;
+
+box-sizing:border-box;
+}
+
+.gallery-item,
+.review-card{
+
+background:#111;
+
+padding:30px;
+
+width:300px;
+
+border-radius:15px;
+
+border:1px solid silver;
+
+box-sizing:border-box;
+}
+
+.card h3{
+color:royalblue;
+}
+
+.card ul{
+text-align:left;
+line-height:1.8;
+flex-grow:1;
+}
+
+.card button{
+
+margin-top:auto;
+}
+
+.gallery-item img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+}
+
+.stars{
+color:gold;
+font-size:1.5rem;
+}
+
+.contact-popup{
+
+display:none;
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+background:#111;
+
+padding:30px;
+
+width:400px;
+
+border-radius:20px;
+
+border:2px solid royalblue;
+
+text-align:center;
+
+z-index:2000;
+}
+
+.contact-popup a{
+
+color:white;
+
+text-decoration:none;
+}
+
+.contact-popup a:hover{
+
+color:white;
+
+text-shadow:
+0 0 10px royalblue;
+}
+

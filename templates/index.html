@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lake & Lane Detailing</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<nav>
+
+<h1>Lake & Lane Detailing</h1>
+
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#" onclick="showContact()">Contact</a>
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="glow-circle"></div>
+
+<div class="logo-container">
+
+<img
+src="{{ url_for('static', filename='images/logo.jpg') }}"
+class="logo">
+
+<h1 class="brand-title">
+Lake & Lane
+</h1>
+
+<h2>Premium Mobile Detailing</h2>
+
+<p>
+Professional detailing that restores
+and protects that gem state shine.
+</p>
+
+<button onclick="showContact()">
+Contact Now
+</button>
+
+</div>
+
+</section>
+
+
+
+<section class="services" id="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Interior Detail</h3>
+
+<ul>
+
+<li> Deep vacuuming of carpets and seats</li>
+<li> Dashboard cleaning and conditioning</li>
+<li>Plastic cleaning and restoration</li>
+<li>Door panel restoration</li>
+<li>Window cleaning</li>
+<li>Floor mat cleaning</li>
+<li>Odor reduction</li>
+
+</ul>
+
+<button onclick="showInterior()">
+View Full Details
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Exterior Detail</h3>
+
+<ul>
+<li>Complete exterior foam wash/wax</li>
+<li>Wheel cleaning</li>
+<li>Trim protection</li>
+<li>Exterior window cleaning</li>
+</ul>
+
+<button onclick="showExterior()">
+View Full Details
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Full Detail</h3>
+
+<ul>
+<li>Deep cleaning package</li>
+<li>Complete interior package</li>
+<li>Complete exterior package</li>
+</ul>
+
+<button onclick="showFull()">
+View Full Details
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="gallery" id="gallery">
+
+<h2>Before & After Gallery</h2>
+
+<div class="gallery-row">
+
+<div class="gallery-item">
+
+<h3>Before</h3>
+
+<img
+src="{{ url_for('static',
+filename='images/gallery/before1.jpg') }}">
+
+</div>
+
+<div class="gallery-item">
+
+<h3>After</h3>
+
+<img
+src="{{ url_for('static',
+filename='images/gallery/after1.jpg') }}">
+
+</div>
+
+<div class="gallery-row">
+
+<div class="gallery-item">
+
+<h3>Before</h3>
+
+<img
+src="{{ url_for('static',
+filename='images/gallery/before2.jpg') }}"
+alt="Before Detail">
+
+</div>
+
+
+<div class="gallery-item">
+
+<h3>After</h3>
+
+<img
+src="{{ url_for('static',
+filename='images/gallery/after2.jpg') }}"
+alt="After Detail">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="reviews" id="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-cards">
+
+<div class="review-card">
+
+<img
+class="review-photo"
+src="{{ url_for('static',
+filename='images/reviews/review1.jpg') }}"
+alt="Customer Review Photo">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+I took my vehicle in for a full interior and exterior detail, and the results are incredible. They paid attention to every small detail. The paint looks brand new and the interior is spotless, it honestly feels like a different truck. If you want high-quality work from people who actually care about the finish, this is the place to go. Highly recommended.
+</p>
+
+<h4>
+— Chase
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="interiorPopup"
+class="contact-popup">
+
+<h2>
+Interior Detail Package
+</h2>
+
+<h3 class="price">
+Starting at $100
+</h3>
+
+<p>
+
+✔ Deep vacuuming of carpets and seats<br>
+
+✔ Dashboard cleaning and conditioning<br>
+
+✔ Plastic cleaning and restoration<br>
+
+✔ Window cleaning<br>
+
+✔ Floor mat cleaning<br>
+
+✔ Odor reduction
+</p>
+
+<div class="addons">
+
+<h4>Add-On Services</h4>
+
+<p>
+
+Heavy stain removal:
+$10 per stain<br>
+
+Pet hair removal:
+$20 flat fee<br>
+
+Travel fee:
+$2 per mile outside a 20-mile radius of Athol, Idaho
+
+</p>
+
+</div>
+
+<button onclick="hideInterior()">
+Close
+</button>
+
+</div>
+
+<div id="exteriorPopup"
+class="contact-popup">
+
+<h2>
+Exterior Detail Package
+</h2>
+
+<h3 class="price">
+Starting at $80
+</h3>
+
+<p>
+
+✔ Complete exterior foam wash/wax<br>
+
+✔ Wheel and tire cleaning<br>
+
+✔ Trim protection treatment<br>
+
+✔ Exterior window cleaning
+
+</p>
+
+<div class="addons">
+
+<h4>Add-On Services</h4>
+
+<p>
+
+Travel fee:
+$2 per mile outside a 20-mile radius of Athol, Idaho
+
+</p>
+
+</div>
+
+<button onclick="hideExterior()">
+Close
+</button>
+
+</div>
+
+<div id="fullPopup"
+class="contact-popup">
+
+<h2>
+Full Detail Package
+</h2>
+
+<h3 class="price">
+Starting at $120
+</h3>
+
+<p>
+
+✔ Deep cleaning package<br>
+
+✔ Complete interior detail<br>
+
+✔ Complete exterior detail<br>
+
+</p>
+
+<div class="addons">
+
+<h4>Add-On Services</h4>
+
+<p>
+
+Heavy stain removal:
+$10 per stain<br>
+
+Pet hair removal:
+$20 flat fee<br>
+
+Travel fee:
+$2 per mile outside a 20-mile radius of Athol, Idaho
+
+</p>
+
+</div>
+
+<button onclick="hideFull()">
+Close
+</button>
+
+</div>
+
+
+<div id="contactBox"
+class="contact-popup">
+
+<h2>Contact Lake & Lane</h2>
+
+<p>
+
+Instagram:
+
+<a href="https://instagram.com/lakeandlanedetailing"
+target="_blank">
+
+@lakeandlanedetailing
+
+</a>
+
+</p>
+
+<p>
+
+Email:
+
+<a href="mailto:lakeandlanedetailing@gmail.com">
+
+lakeandlanedetailing@gmail.com
+
+</a>
+
+</p>
+
+<button onclick="hideContact()">
+Close
+</button>
+
+</div>
+
+
+
+<script>
+
+function showContact(){
+document.getElementById(
+"contactBox"
+).style.display="block";
+}
+
+function hideContact(){
+document.getElementById(
+"contactBox"
+).style.display="none";
+}
+
+function showInterior(){
+
+document.getElementById(
+"interiorPopup"
+).style.display="block";
+
+}
+
+function hideInterior(){
+
+document.getElementById(
+"interiorPopup"
+).style.display="none";
+
+}
+function showExterior(){
+document.getElementById(
+"exteriorPopup"
+).style.display="block";
+}
+
+function hideExterior(){
+document.getElementById(
+"exteriorPopup"
+).style.display="none";
+}
+
+function showFull(){
+document.getElementById(
+"fullPopup"
+).style.display="block";
+}
+
+function hideFull(){
+document.getElementById(
+"fullPopup"
+).style.display="none";
+}
+
+</script>
+
+</body>
+</html>
